@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+
+build:
+  local:
+    push: false
+
+  tagPolicy:
+    sha256: {}
+
+  artifacts:
+  - image: 193048895737.dkr.ecr.us-west-1.amazonaws.com/taylorm/nanofibrous_budded
+    context: .
+    docker:
+      dockerfile: Dockerfile
