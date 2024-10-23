@@ -1,4 +1,4 @@
-FROM golang:1.17-bullseye AS builder
+FROM golang:1.23-bullseye AS builder
 
 RUN echo 'deb [trusted=yes] https://repo.goreleaser.com/apt/ /' | tee /etc/apt/sources.list.d/goreleaser.list
 RUN apt-get update
